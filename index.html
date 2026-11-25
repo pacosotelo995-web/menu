@@ -3,93 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>San Judas Tadeo Menú</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; base-uri 'none'; form-action 'none'">
+<title>San Judas Tadeo · Food Truck de Comida Mexicana en Chicago</title>
+<meta name="description" content="Menú del food truck San Judas Tadeo de la Familia Sotelo: tacos al pastor, quesabirria, burritos, tortas, elotes y aguas frescas en Chicago.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/og-image.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:title" content="San Judas Tadeo · Food Truck Mexicano">
+<meta property="og:description" content="Tacos al pastor, quesabirria, burritos y aguas frescas en Chicago. Familia Sotelo.">
+<meta property="og:url" content="https://san-judas-tadeo-menu.onrender.com/">
+<meta property="og:image" content="https://san-judas-tadeo-menu.onrender.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="San Judas Tadeo, food truck de comida mexicana">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#16235c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Bowlby+One&family=Work+Sans:wght@400;600;800&display=swap">
-<style>
-/* Layout: street menu board — papel picado banner, bold price rows, combo tickets */
-:root{
-  --azul:#16235c;
-  --azul-2:#1f3080;
-  --rosa:#ff2e88;
-  --cempa:#ffb000;
-  --verde:#14b37d;
-  --papel:#fff6e6;
-  --display:"Shrikhand", "Georgia", serif;
-  --block:"Bowlby One", "Impact", sans-serif;
-  --body:"Work Sans", system-ui, sans-serif;
-  color-scheme:dark;
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--azul);color:var(--papel);font-family:var(--body);font-size:16px;line-height:1.45}
-.wrap{max-width:980px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:0 48px}
-
-/* papel picado */
-.picado{display:flex;height:64px;overflow:hidden;margin-bottom:8px}
-.picado span{flex:1 0 64px;height:64px;clip-path:polygon(0 0,100% 0,100% 78%,88% 100%,75% 80%,62% 100%,50% 80%,38% 100%,25% 80%,12% 100%,0 78%);
-  -webkit-mask:radial-gradient(circle at 50% 38%,transparent 7px,#000 8px),radial-gradient(circle at 22% 22%,transparent 4px,#000 5px);
-  -webkit-mask-composite:source-in;mask-composite:intersect;
-  mask:radial-gradient(circle at 50% 38%,transparent 7px,#000 8px),radial-gradient(circle at 22% 22%,transparent 4px,#000 5px);
-  animation:sway 3.5s ease-in-out infinite;transform-origin:top center}
-.picado span:nth-child(5n+1){background:var(--rosa)}
-.picado span:nth-child(5n+2){background:var(--cempa);animation-delay:-.7s}
-.picado span:nth-child(5n+3){background:var(--verde);animation-delay:-1.4s}
-.picado span:nth-child(5n+4){background:var(--papel);animation-delay:-2.1s}
-.picado span:nth-child(5n+5){background:#8a5cff;animation-delay:-2.8s}
-@keyframes sway{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1.5deg)}}
-@media (prefers-reduced-motion:reduce){.picado span{animation:none}}
-
-header{text-align:center;padding-block:28px 12px}
-.eyebrow{font-family:var(--block);color:var(--cempa);letter-spacing:.18em;font-size:.85rem;text-transform:uppercase}
-h1{font-family:var(--display);font-weight:400;font-size:clamp(3rem,11vw,6.5rem);line-height:.95;margin:8px 0 6px;color:var(--rosa);
-  text-shadow:4px 4px 0 var(--cempa),8px 8px 0 #0c1440;text-wrap:balance}
-.tag{font-size:1.05rem;opacity:.9}
-.tag b{color:var(--cempa)}
-
-.estrella{margin:28px auto 8px;max-width:640px;background:var(--rosa);color:#fff;border-radius:18px;padding:22px 24px;
-  display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;transform:rotate(-1.2deg);box-shadow:8px 8px 0 #0c1440}
-.estrella .sello{font-family:var(--block);background:var(--cempa);color:var(--azul);border-radius:50%;width:84px;height:84px;display:grid;place-items:center;text-align:center;font-size:.8rem;line-height:1.05;transform:rotate(-12deg)}
-.estrella h2{font-family:var(--display);font-weight:400;font-size:1.9rem;margin:0;line-height:1}
-.estrella p{margin:4px 0 0;font-size:.95rem}
-.estrella .precio{font-family:var(--block);font-size:2.6rem;color:var(--papel);text-shadow:3px 3px 0 var(--azul)}
-
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:28px;margin-top:40px}
-section.cat{background:var(--azul-2);border-radius:22px;padding:22px 22px 14px;border:3px solid #2c3f9e}
-.cat h3{font-family:var(--block);font-weight:400;font-size:1.6rem;margin:0 0 14px;display:flex;align-items:center;gap:10px;letter-spacing:.03em}
-.cat h3 .dot{width:14px;height:14px;border-radius:50%;background:var(--c)}
-.cat h3{color:var(--c)}
-.item{display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:12px 0;border-top:2px dashed rgba(255,246,230,.18)}
-.item:first-of-type{border-top:0}
-.item .n{font-weight:800;font-size:1.12rem;min-width:0}
-.item .p{font-family:var(--block);font-size:1.25rem;color:var(--cempa);font-variant-numeric:tabular-nums;white-space:nowrap}
-.item .d{grid-column:1/-1;font-size:.92rem;opacity:.8}
-.pill{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:999px;margin-left:6px;vertical-align:2px;background:var(--rosa);color:#fff}
-.pill.v{background:var(--verde)}
-
-.combos{margin-top:40px}
-.combos h3{font-family:var(--display);font-weight:400;font-size:2.4rem;text-align:center;margin:0 0 18px;color:var(--cempa)}
-.tickets{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px}
-.ticket{background:var(--papel);color:var(--azul);border-radius:16px;padding:18px 20px;position:relative;
-  -webkit-mask:radial-gradient(circle at 0 50%,transparent 12px,#000 13px) left/51% 100% no-repeat,radial-gradient(circle at 100% 50%,transparent 12px,#000 13px) right/51% 100% no-repeat;
-  mask:radial-gradient(circle at 0 50%,transparent 12px,#000 13px) left/51% 100% no-repeat,radial-gradient(circle at 100% 50%,transparent 12px,#000 13px) right/51% 100% no-repeat}
-.ticket .num{font-family:var(--block);font-size:.8rem;letter-spacing:.15em;color:var(--rosa)}
-.ticket h4{font-family:var(--block);font-weight:400;font-size:1.3rem;margin:4px 0}
-.ticket p{margin:0 0 10px;font-size:.92rem}
-.ticket .p{font-family:var(--display);font-size:2rem;color:var(--rosa)}
-
-.salsas{margin-top:40px;text-align:center}
-.salsas h3{font-family:var(--block);font-weight:400;letter-spacing:.1em;color:var(--verde);margin:0 0 12px}
-.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-.chips span{border:2px solid var(--papel);border-radius:999px;padding:6px 14px;font-weight:600}
-.chips span i{font-style:normal;color:var(--rosa);margin-left:4px}
-
-footer{margin-top:44px;text-align:center;display:grid;gap:8px}
-footer .big{font-family:var(--display);font-size:1.6rem;color:var(--rosa)}
-footer small{opacity:.7}
-@media (max-width:520px){
-  .estrella{grid-template-columns:1fr;text-align:center;justify-items:center}
-}
-</style>
+<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
@@ -97,7 +31,7 @@ footer small{opacity:.7}
   <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
 </div>
 
-<div class="wrap">
+<main class="wrap">
   <header>
     <div class="eyebrow">Food Truck · Comida Mexicana</div>
     <h1>San Judas Tadeo</h1>
@@ -105,7 +39,7 @@ footer small{opacity:.7}
   </header>
 
   <div class="estrella">
-    <div class="sello">LA<br>MÁS<br>PEDIDA</div>
+    <div class="sello" aria-label="La más pedida">LA<br>MÁS<br>PEDIDA</div>
     <div>
       <h2>Quesabirria</h2>
       <p>3 tacos dorados con queso Oaxaca, cebolla, cilantro y su consomé para dipear</p>
@@ -114,8 +48,8 @@ footer small{opacity:.7}
   </div>
 
   <div class="grid">
-    <section class="cat" style="--c:var(--cempa)">
-      <h3><span class="dot"></span>TACOS</h3>
+    <section class="cat c-cempa" aria-labelledby="h-tacos">
+      <h3 id="h-tacos"><span class="dot" aria-hidden="true"></span>TACOS</h3>
       <div class="item"><span class="n">Al Pastor <span class="pill">Del trompo</span></span><span class="p">$11</span><span class="d">Orden de 3 · piña, cebolla, cilantro</span></div>
       <div class="item"><span class="n">Asada</span><span class="p">$12</span><span class="d">Orden de 3 · res a la parrilla</span></div>
       <div class="item"><span class="n">Chorizo</span><span class="p">$11</span><span class="d">Orden de 3 · chorizo de la casa</span></div>
@@ -123,23 +57,23 @@ footer small{opacity:.7}
       <div class="item"><span class="n">Taco suelto</span><span class="p">$4</span><span class="d">Cualquier guisado</span></div>
     </section>
 
-    <section class="cat" style="--c:var(--rosa)">
-      <h3><span class="dot"></span>LOS GRANDES</h3>
+    <section class="cat c-rosa" aria-labelledby="h-grandes">
+      <h3 id="h-grandes"><span class="dot" aria-hidden="true"></span>LOS GRANDES</h3>
       <div class="item"><span class="n">Burrito</span><span class="p">$14</span><span class="d">Arroz, frijoles, queso, crema y guacamole</span></div>
       <div class="item"><span class="n">Torta</span><span class="p">$13</span><span class="d">Bolillo, frijoles, aguacate, jalapeño</span></div>
       <div class="item"><span class="n">Quesadilla Gringa</span><span class="p">$12</span><span class="d">Tortilla de harina, pastor y queso fundido</span></div>
       <div class="item"><span class="n">Birria Ramen <span class="pill">Nuevo</span></span><span class="p">$15</span><span class="d">Ramen en consomé de birria con carne deshebrada</span></div>
     </section>
 
-    <section class="cat" style="--c:var(--verde)">
-      <h3><span class="dot"></span>ANTOJITOS</h3>
+    <section class="cat c-verde" aria-labelledby="h-antojitos">
+      <h3 id="h-antojitos"><span class="dot" aria-hidden="true"></span>ANTOJITOS</h3>
       <div class="item"><span class="n">Elote <span class="pill v">Veggie</span></span><span class="p">$6</span><span class="d">Mayonesa, queso cotija, chile y limón</span></div>
       <div class="item"><span class="n">Esquite <span class="pill v">Veggie</span></span><span class="p">$6</span><span class="d">En vaso, con todo</span></div>
       <div class="item"><span class="n">Nachos Locos</span><span class="p">$10</span><span class="d">Totopos, queso, frijoles, tu carne favorita</span></div>
     </section>
 
-    <section class="cat" style="--c:#a98bff">
-      <h3><span class="dot"></span>BEBIDAS</h3>
+    <section class="cat c-morado" aria-labelledby="h-bebidas">
+      <h3 id="h-bebidas"><span class="dot" aria-hidden="true"></span>BEBIDAS</h3>
       <div class="item"><span class="n">Agua Fresca 24 oz</span><span class="p">$5</span><span class="d">Horchata · Jamaica · Tamarindo</span></div>
       <div class="item"><span class="n">Jarritos</span><span class="p">$3</span><span class="d">Mandarina, tamarindo, toronja</span></div>
       <div class="item"><span class="n">Coca de vidrio</span><span class="p">$4</span><span class="d">Hecha en México</span></div>
@@ -159,10 +93,10 @@ footer small{opacity:.7}
   <div class="salsas">
     <h3>SALSAS DE LA CASA</h3>
     <div class="chips">
-      <span>Verde <i>🌶</i></span>
-      <span>Roja <i>🌶🌶</i></span>
-      <span>Aguacate <i>🌶</i></span>
-      <span>Habanero <i>🌶🌶🌶</i></span>
+      <span>Verde <i aria-label="picante bajo">🌶</i></span>
+      <span>Roja <i aria-label="picante medio">🌶🌶</i></span>
+      <span>Aguacate <i aria-label="picante bajo">🌶</i></span>
+      <span>Habanero <i aria-label="picante alto">🌶🌶🌶</i></span>
     </div>
   </div>
 
@@ -172,6 +106,6 @@ footer small{opacity:.7}
     <div>Propietarios: <b>Familia Sotelo</b></div>
     <small>Aceptamos tarjeta, efectivo y pagos con el celular</small>
   </footer>
-</div>
+</main>
 </body>
 </html>
